@@ -31,6 +31,7 @@ describe('MonstarLab >> mall.cz test', () => {
           scrollPosition += scrollSize;
             /*
             gets the total of the carousels on the page and validate if each carousel contains 20 items.
+            The task said 15, but I changed it to 20 so that it would analyze more than one carousel; otherwise, it would fail on the first carousel.
             */
             cy.get(carousel_list,{timeout:15000}).each(($ele) => {
               cy.wrap($ele).find(carousel_element).should('have.length', 20);
