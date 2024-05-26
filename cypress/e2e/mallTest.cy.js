@@ -1,7 +1,7 @@
 describe('MonstarLab >> mall.cz test', () => {
-  const acceptCookies = '[class="legal-consent__button-container"]'
-  const carousel_list = '[class="hooper-track"]'
-  const carousel_element = '[data-testid="cms-carousel-slide"]'
+  const PO_acceptCookies = '[class="legal-consent__button-container"]'
+  const PO_carousel_list = '[class="hooper-track"]'
+  const PO_carousel_element = '[data-testid="cms-carousel-slide"]'
 
   it('Mall.cz test, it fails when a carousel doesnt have 20 elements', () => {
 
@@ -15,7 +15,7 @@ describe('MonstarLab >> mall.cz test', () => {
     cy.url().should('include', 'www.mall.cz')
     
     //accept all cookies by clicking in the second button
-    cy.get(acceptCookies).eq(1).click()
+    cy.get(PO_acceptCookies).eq(1).click()
 
     /*
     gets the total height of the document to do small scrolls till the end
@@ -33,8 +33,8 @@ describe('MonstarLab >> mall.cz test', () => {
             gets the total of the carousels on the page and validate if each carousel contains 20 items.
             The task said 15, but I changed it to 20 so that it would analyze more than one carousel; otherwise, it would fail on the first carousel.
             */
-            cy.get(carousel_list,{timeout:15000}).each(($ele) => {
-              cy.wrap($ele).find(carousel_element).should('have.length', 20);
+            cy.get(PO_carousel_list,{timeout:15000}).each(($ele) => {
+              cy.wrap($ele).find(PO_carousel_element).should('have.length', 20);
             });
     
           cy.wait(500).then(scroll); 
