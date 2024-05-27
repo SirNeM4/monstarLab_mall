@@ -3,7 +3,8 @@ This project uses POM (Page Object Model) as a QA design pattern, and this will 
 - `cypress`: main folder
 - `cypress/e2e`: will contain all tests
 - `cypress/page_object`: will contain all Page Objects
-- `cypress/screenshots`: will contain error images when a test fails    
+- `cypress/screenshots`: will contain error images when a test fails
+- baseUrl and other settings are set to `cypress.config.js`
 
 ### Install
 - Open a terminal and go to the folder
