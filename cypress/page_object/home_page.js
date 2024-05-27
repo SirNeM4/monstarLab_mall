@@ -21,6 +21,7 @@ export default class home_page {
 
     /*
     Gets all the carousels on the page and validate if each carousel contains x number of items
+    Fhe function will receive the number of elements to validate inside each Carousel 
     */
     countCarouselElements(elements){
         cy.get(PO_carousel_list,{timeout:15000}).each(($ele) => {

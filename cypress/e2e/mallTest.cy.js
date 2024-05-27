@@ -16,6 +16,7 @@ describe('MonstarLab >> mall.cz test', () => {
     home_page.acceptAllCookies(1)
 
     //Perform a Scroll and validate carousel elements
+    //The exercise says that we need to validate 15 items, but I changed it to 20 so that it analyzes more than one carousel; otherwise it would fail on the first carousel, now the assertion fails on the second carousel
     home_page.scrollAndValidateCarouselItems(20)
   })
 
