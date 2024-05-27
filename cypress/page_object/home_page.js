@@ -17,6 +17,7 @@ export default class home_page {
     */
     acceptAllCookies(number){
         cy.get(PO_acceptCookies).eq(number).click()
+        cy.get(PO_acceptCookies).should('not.exist')
     }
 
     /*
